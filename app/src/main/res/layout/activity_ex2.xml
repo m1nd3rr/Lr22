@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ex2_activity">
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/hotRBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Горячее" />
+
+        <RadioButton
+            android:id="@+id/coldRBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Холодное" />
+        <ImageView
+            android:id="@+id/image"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/baseline_thumb_down_alt_24"/>
+    </RadioGroup>
+    <LinearLayout
+        android:id="@+id/liniearl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/radio_group"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Молоко"
+            android:id="@+id/milk"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Сливки"
+            android:id="@+id/Sliwki"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Сахар"
+            android:id="@+id/Sugar"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Сироп"
+            android:id="@+id/Sirop"/>
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/liniearl">
+
+        <RadioButton
+            android:id="@+id/deliv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Доставка" />
+
+        <RadioButton
+            android:id="@+id/samov"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Самовывоз" />
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Доставить"
+        android:id="@+id/deliver_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
